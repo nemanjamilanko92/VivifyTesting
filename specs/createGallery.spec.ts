@@ -31,7 +31,7 @@ describe('Test create,edit and delete gallery',()=>{
          expect(await createGallery.urlErrorMsgText()).toBe("Wrong format of image")
     })
     it("Negative Create gallery test title minimum title lenght ",async()=>{
-     
+     //add comment
         await createGallery.createGallery("a","nesto","https://digitalcircleweb.com/wp-content/uploads/2019/08/Drvo-u-sred-jezera")
        await  landingPage.MyGalleries.click()
          expect(await createGallery.titleErrorMsgTooshortText()).toBe("The title must be at least 2 characters.")
